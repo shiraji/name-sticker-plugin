@@ -1,11 +1,10 @@
 plugins {
-    id("java")
     id("org.jetbrains.kotlin.jvm") version "1.9.0"
-    id("org.jetbrains.intellij") version "1.15.0"
+    id("org.jetbrains.intellij") version "1.17.1"
 }
 
 group = "com.github.shiraji"
-version = "1.0-SNAPSHOT"
+version = System.getProperty("VERSION") ?: "0.0.1"
 
 repositories {
     mavenCentral()
@@ -16,8 +15,7 @@ repositories {
 intellij {
     version.set("2022.2.5")
     type.set("IC") // Target IDE Platform
-
-    plugins.set(listOf(/* Plugin Dependencies */))
+    updateSinceUntilBuild.set(false)
 }
 
 tasks {
@@ -30,9 +28,12 @@ tasks {
         kotlinOptions.jvmTarget = "17"
     }
 
+    buildSearchableOptions {
+        enabled = false
+    }
+
     patchPluginXml {
-        sinceBuild.set("222")
-        untilBuild.set("232.*")
+        changeNotes.set(project.file("LATEST.txt").readText())
     }
 
     signPlugin {
@@ -42,6 +43,11 @@ tasks {
     }
 
     publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
+        token.set(System.getenv("HUB_TOKEN"))
+        channels.set(listOf(System.getProperty("CHANNELS") ?: "beta"))
+    }
+
+    test {
+        useJUnitPlatform()
     }
 }

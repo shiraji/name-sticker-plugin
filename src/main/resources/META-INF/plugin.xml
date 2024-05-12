@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.github.shiraji.name-sticker</id>
+    <id>com.github.shiraji.namesticker</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
@@ -17,7 +17,7 @@
     This plugin show the name of the IDE when the IDE lost focus.<br/>
     This let you easily find the IDE when you have multiple IDEs open.<br/>
     <br/>
-    <img src="https://github.com/shiraji/namesticker/blob/main/web/images/intro.gif?raw=true" width="480" /><br/>
+    <img src="https://github.com/shiraji/name-sticker-plugin/blob/main/web/images/intro.gif?raw=true" width="480" /><br/>
     You can change the name, color, size of the text showing on IDE from the setting.<br/>
     ]]></description>
 
