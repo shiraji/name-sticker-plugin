@@ -1,0 +1,5 @@
+<p>0.0.1</p>
+<ul>
+  <li>Initial release</li>
+</ul>
+<p>Older version changes are listed on <a href="https://github.com/shiraji/name-sticker-plugin/blob/main/CHANGELOG.md">CHANGELOG.md</a></p>
