@@ -33,6 +33,7 @@ tasks {
     }
 
     patchPluginXml {
+        sinceBuild.set("222")
         changeNotes.set(project.file("LATEST.txt").readText())
     }
 
